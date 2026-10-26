@@ -1,611 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nalif Ahamed H. - HSE Officer & Petrochemical Engineer</title>
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        /* CSS Variables & Setup */
-        :root {
-            --primary: #0f172a;       /* Deep Slate / Industrial Dark */
-            --accent: #f97316;        /* Safety Orange Accent */
-            --accent-hover: #ea580c;
-            --text-main: #334155;
-            --text-light: #64748b;
-            --bg-main: #ffffff;
-            --bg-light: #f8fafc;
-            --border-color: #e2e8f0;
-            --transition: all 0.3s ease;
-        }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nalif Ahamed H. — HSE Officer &amp; Petrochemical Engineer</title>
+<style>
+:root{
+  --bg:#fbf8f3; --ink:#161733; --muted:#5d5f7d; --line:#dcd8ea; --panel:#ffffff;
+  --brand:#2b2f8f; --brand-ink:#ffffff; --pop:#ff5a4e; --pop-ink:#ffffff; --tint:#ecebf8;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10112a; --ink:#ecebfa; --muted:#a3a5c9; --line:#2b2d54; --panel:#181a3c;
+    --brand:#8f95ff; --brand-ink:#10112a; --pop:#ff7a6e; --pop-ink:#2a0a07; --tint:#1f2150; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#10112a; --ink:#ecebfa; --muted:#a3a5c9; --line:#2b2d54; --panel:#181a3c;
+  --brand:#8f95ff; --brand-ink:#10112a; --pop:#ff7a6e; --pop-ink:#2a0a07; --tint:#1f2150; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;line-height:1.65}
+a{color:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:0 24px}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+/* hero */
+.hero{padding:44px 0 40px;border-bottom:3px solid var(--ink)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:60px;font-size:14px;color:var(--muted)}
+.top b{color:var(--ink);letter-spacing:.14em;text-transform:uppercase;font-size:12.5px}
+.btn{display:inline-block;padding:12px 22px;font-weight:700;font-size:15px;text-decoration:none;border-radius:6px;border:2px solid var(--ink);color:var(--ink);background:transparent}
+.btn.pop{background:var(--pop);border-color:var(--pop);color:var(--pop-ink)}
+.btn.brand{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(46px,10vw,104px);line-height:.98;margin:0 0 18px;letter-spacing:-.02em}
+h1 span{color:var(--brand)}
+.role{font-size:clamp(18px,2.6vw,24px);margin:0 0 28px;max-width:30ch;color:var(--muted)}
+.role b{color:var(--pop)}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+.facts{display:flex;flex-wrap:wrap;gap:8px 26px;font-size:15px;color:var(--muted)}
+.facts strong{color:var(--ink)}
 
-        html {
-            scroll-behavior: smooth;
-        }
+/* numbered rows */
+.row{display:grid;grid-template-columns:200px 1fr;gap:26px;padding:42px 0;border-bottom:1px solid var(--line)}
+.label{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.label em{font-style:normal;color:var(--pop);display:block;font-family:Georgia,serif;font-size:34px;letter-spacing:0;margin-bottom:4px}
+.body p{margin:0 0 14px;font-size:17px;max-width:68ch}
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-main);
-            background-color: var(--bg-main);
-            line-height: 1.6;
-        }
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:26px;border:2px solid var(--ink);border-radius:8px;overflow:hidden}
+.stat{padding:18px;border-right:2px solid var(--ink);background:var(--panel)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-family:Georgia,serif;font-size:28px;color:var(--brand);line-height:1.1}
+.stat span{font-size:13.5px;color:var(--muted)}
 
-        /* Containers & Utilities */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tag{padding:6px 14px;border-radius:6px;font-size:14.5px;background:var(--tint);color:var(--brand);font-weight:600}
+.tag.o{background:transparent;border:1.5px solid var(--line);color:var(--ink);font-weight:500}
 
-        .section {
-            padding: 5rem 0;
-        }
+.job{padding:0 0 28px;margin-bottom:28px;border-bottom:1px dashed var(--line)}
+.job:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.job .when{font-size:13.5px;font-weight:800;color:var(--pop);letter-spacing:.06em}
+.job h3{margin:2px 0 0;font-family:Georgia,serif;font-size:24px}
+.job .co{color:var(--brand);font-weight:700;margin:2px 0 12px}
+.job ul{margin:0;padding-left:20px}
+.job li{margin-bottom:7px;font-size:16px}
 
-        .bg-light {
-            background-color: var(--bg-light);
-        }
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--panel);border:2px solid var(--ink);border-radius:8px;padding:20px}
+.card h3{margin:0 0 6px;font-family:Georgia,serif;font-size:19px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.card .yr{display:inline-block;margin-top:10px;font-weight:800;font-size:13px;color:var(--brand)}
 
-        .text-center {
-            text-align: center;
-        }
+.contact{background:var(--brand);color:var(--brand-ink);border-radius:10px;padding:32px;margin:42px 0 0;display:flex;flex-wrap:wrap;gap:20px;justify-content:space-between;align-items:center}
+.contact h2{font-family:Georgia,serif;font-size:32px;margin:0 0 6px}
+.contact p{margin:0;font-size:16px}
+.contact .acts{display:flex;gap:10px;flex-wrap:wrap}
+.contact .btn{border-color:var(--brand-ink);color:var(--brand-ink)}
+.contact .btn.pop{border-color:var(--pop);color:var(--pop-ink)}
 
-        .section-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 3rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
+footer{padding:26px 0 44px;color:var(--muted);font-size:13.5px}
 
-        .section-title span {
-            color: var(--accent);
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: #fff;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--border-color);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            border-color: var(--primary);
-        }
-
-        /* Header & Navigation */
-        .header {
-            position: sticky;
-            top: 0;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--primary);
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        .btn-nav {
-            background-color: var(--primary);
-            color: #fff !important;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 7rem 0 5rem;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: var(--accent);
-            color: #fff;
-            padding: 0.25rem 0.75rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            border-radius: 20px;
-            margin-bottom: 1rem;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--primary);
-            line-height: 1.1;
-            margin-bottom: 0.5rem;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--text-light);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-desc {
-            font-size: 1.125rem;
-            color: var(--text-main);
-            margin-bottom: 2.5rem;
-            max-width: 600px;
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-            padding: 1.5rem;
-            background: #fff;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .stat-item h3 {
-            font-size: 1.5rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .stat-item p {
-            font-size: 0.875rem;
-            color: var(--text-light);
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        /* About Section */
-        .about-card {
-            background: #fff;
-            padding: 2.5rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            font-size: 1.125rem;
-            line-height: 1.8;
-        }
-
-        .about-card p + p {
-            margin-top: 1.25rem;
-        }
-
-        /* Competencies Section */
-        .grid-competencies {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .competency-tag {
-            background: #fff;
-            border: 1px solid var(--border-color);
-            padding: 0.75rem 1.25rem;
-            border-radius: 6px;
-            font-weight: 500;
-            color: var(--primary);
-            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
-            transition: var(--transition);
-        }
-
-        .competency-tag:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            border-left: 2px solid var(--border-color);
-            margin-left: 1rem;
-            padding-left: 2rem;
-        }
-
-        .timeline-item {
-            position: relative;
-            margin-bottom: 3rem;
-        }
-
-        .timeline-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.57rem;
-            top: 0.25rem;
-            width: 12px;
-            height: 12px;
-            background: var(--accent);
-            border-radius: 50%;
-            border: 2px solid #fff;
-        }
-
-        .timeline-date {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-content {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .timeline-content h3 {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 700;
-        }
-
-        .timeline-content h4 {
-            font-size: 1rem;
-            color: var(--text-light);
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-content ul {
-            list-style-type: disc;
-            padding-left: 1.25rem;
-        }
-
-        .timeline-content li {
-            margin-bottom: 0.5rem;
-            color: var(--text-main);
-        }
-
-        /* Education Section */
-        .grid-education {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .edu-card {
-            background: #fff;
-            padding: 2rem;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-        }
-
-        .edu-year {
-            font-size: 0.875rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-
-        .edu-card h3 {
-            font-size: 1.125rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.25rem;
-        }
-
-        .edu-inst {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .edu-grade {
-            font-weight: 600;
-            color: var(--primary);
-            font-size: 0.9rem;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background: var(--primary);
-            color: #fff;
-        }
-
-        .contact-section .section-title {
-            color: #fff;
-            justify-content: center;
-        }
-
-        .contact-lead {
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            font-size: 1.125rem;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info a, .contact-info span {
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-
-        .contact-info a:hover {
-            color: var(--accent);
-        }
-
-        /* Footer */
-        .footer {
-            background: #090d16;
-            color: #64748b;
-            padding: 1.5rem 0;
-            text-align: center;
-            font-size: 0.875rem;
-        }
-
-        /* Responsive Media Queries */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-stats {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+@media (max-width:760px){
+  .row{grid-template-columns:1fr;gap:12px;padding:32px 0}
+  .label em{display:inline;margin-right:10px}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:none}
+  .stat:nth-child(-n+2){border-bottom:2px solid var(--ink)}
+  .edu{grid-template-columns:1fr}
+  .top{margin-bottom:36px}
+}
+</style>
 </head>
 <body>
+<div class="wrap">
 
-    <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="#" class="logo">Nalif Ahamed H.</a>
-            <nav class="nav-links">
-                <a href="#about">About</a>
-                <a href="#competencies">Competencies</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#contact" class="btn-nav">Contact</a>
-            </nav>
-        </div>
-    </header>
+  <header class="hero">
+    <div class="top"><b>Portfolio · 2026</b><span>Abu Dhabi, UAE</span></div>
+    <h1>Nalif<br><span>Ahamed H.</span></h1>
+    <p class="role"><b>HSE Officer</b> &amp; Petrochemical Engineer. Safety and compliance in chemical and steel manufacturing.</p>
+    <div class="actions">
+      <a class="btn pop" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nalifsha%40gmail.com&amp;su=Job%20Opportunity%20%E2%80%93%20Nalif%20Ahamed%20H." target="_blank" rel="noopener">Email me</a>
+      <a class="btn" href="tel:+971565684481">Call</a>
+      <a class="btn" href="https://www.linkedin.com/in/nalif-ahamed-b98526193/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="facts"><span><strong>Email</strong> nalifsha@gmail.com</span><span><strong>Phone</strong> +971 56 568 4481</span></div>
+  </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <span class="badge">Portfolio 2026</span>
-            <h1>Nalif Ahamed H.</h1>
-            <p class="hero-subtitle">HSE Officer & Petrochemical Engineer</p>
-            <p class="hero-desc">Safety and compliance in chemical and steel manufacturing. Based in Abu Dhabi, UAE[cite: 1].</p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <h3>4+</h3>
-                    <p>Years in Production & HSE[cite: 1]</p>
-                </div>
-                <div class="stat-item">
-                    <h3>NEBOSH</h3>
-                    <p>International General Certificate[cite: 1]</p>
-                </div>
-                <div class="stat-item">
-                    <h3>40 / 2</h3>
-                    <p>Personnel per shift & Sectors (Chemical & Steel)[cite: 1]</p>
-                </div>
-            </div>
+  <section class="row" id="about">
+    <div class="label"><em>01</em>About</div>
+    <div class="body">
+      <p>Petrochemical engineering graduate and NEBOSH IGC-certified HSE professional with combined production and safety experience across chemical and steel manufacturing operations in India and the UAE.</p>
+      <p>Began as Junior Executive — Production In-charge at Tagros Chemicals, supervising deltamethrin production and exceeding targets while cutting waste through solvent recovery and reuse. Since June 2024 he has been HSE Officer at Emirates Steel Wool Manufacturing LLC, lowering workplace risk, running training and leading quarterly audits.</p>
+      <div class="stats">
+        <div class="stat"><b>4+</b><span>Years in production &amp; HSE</span></div>
+        <div class="stat"><b>NEBOSH</b><span>International General Certificate</span></div>
+        <div class="stat"><b>40</b><span>Personnel per shift</span></div>
+        <div class="stat"><b>2</b><span>Chemical &amp; steel</span></div>
+      </div>
+    </div>
+  </section>
 
-            <div class="hero-buttons">
-                <a href="mailto:nalifsha@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me[cite: 1]</a>
-                <a href="tel:+971565684481" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call (+971 56 568 4481)[cite: 1]</a>
-                <a href="https://linkedin.com" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn[cite: 1]</a>
-            </div>
-        </div>
-    </section>
+  <section class="row" id="skills">
+    <div class="label"><em>02</em>Core competencies</div>
+    <div class="body">
+      <div class="tags">
+        <span class="tag">HSE management systems</span><span class="tag">Risk assessment</span><span class="tag">HIRA / JSA</span><span class="tag">Permit to Work</span><span class="tag">LOTO &amp; safe work</span><span class="tag">Emergency preparedness</span><span class="tag">Incident investigation</span><span class="tag">Inspections &amp; auditing</span><span class="tag">CAPA</span><span class="tag">Chemical safety</span>
+        <span class="tag o">Process safety</span><span class="tag o">Environmental compliance</span><span class="tag o">PPE &amp; training</span><span class="tag o">Quality control</span><span class="tag o">Fire &amp; safety · Hassantuk</span><span class="tag o">Worker health monitoring</span><span class="tag o">Labour camp &amp; housekeeping</span><span class="tag o">Pest control</span><span class="tag o">Solvent recovery</span>
+      </div>
+    </div>
+  </section>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title"><span>01</span> About Me</h2>
-            <div class="about-card">
-                <p>Petrochemical engineering graduate and NEBOSH IGC-certified HSE professional with combined production and safety experience across chemical and steel manufacturing operations in India and the UAE[cite: 1].</p>
-                <p>Began as Junior Executive Production In-charge at Tagros Chemicals, supervising deltamethrin production and exceeding targets while cutting waste through solvent recovery and reuse[cite: 1]. Since June 2024, serves as HSE Officer at Emirates Steel Wool Manufacturing LLC, lowering workplace risk, running training, and leading quarterly audits[cite: 1].</p>
-            </div>
-        </div>
-    </section>
+  <section class="row" id="experience">
+    <div class="label"><em>03</em>Experience</div>
+    <div class="body">
+      <div class="job">
+        <div class="when">14 JUN 2024 — PRESENT</div>
+        <h3>HSE Officer</h3>
+        <div class="co">Emirates Steel Wool Manufacturing LLC</div>
+        <ul>
+          <li>Lowered workplace risk levels through structured hazard identification and control.</li>
+          <li>Runs regular department-specific safety training.</li>
+          <li>Maintains health monitoring for chemical-section workers.</li>
+          <li>Leads quarterly audits of documents, machinery and vehicles.</li>
+          <li>Keeps records of incidents, equipment-handling safety, PPE and vehicle maintenance checklists.</li>
+          <li>Labour camp and housekeeping inspections; Hassantuk, fire and safety, environment control and pest control.</li>
+        </ul>
+      </div>
+      <div class="job">
+        <div class="when">04 SEP 2021 — 28 JUN 2023</div>
+        <h3>Junior Executive — Production In-charge</h3>
+        <div class="co">Tagros Chemicals India Pvt Ltd</div>
+        <ul>
+          <li>Supervised deltamethrin production: bromination, chlorination, epimerisation, distillation and crystallization.</li>
+          <li>Consistently achieved output above target rate.</li>
+          <li>Reduced waste by recovering process solvents and reusing them to purity specification.</li>
+          <li>Managed rotational shifts of up to 40 personnel.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Core Competencies Section -->
-    <section id="competencies" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title"><span>02</span> Core Competencies</h2>
-            <div class="grid-competencies">
-                <div class="competency-tag">Permit to Work[cite: 2]</div>
-                <div class="competency-tag">LOTO & safe work[cite: 2]</div>
-                <div class="competency-tag">Incident investigation[cite: 2]</div>
-                <div class="competency-tag">HSE management systems[cite: 2]</div>
-                <div class="competency-tag">Risk assessment[cite: 2]</div>
-                <div class="competency-tag">HIRA / JSA[cite: 2]</div>
-                <div class="competency-tag">Emergency preparedness[cite: 2]</div>
-                <div class="competency-tag">Inspections & auditing[cite: 2]</div>
-                <div class="competency-tag">CAPA[cite: 2]</div>
-                <div class="competency-tag">Chemical safety[cite: 2]</div>
-                <div class="competency-tag">Process safety[cite: 2]</div>
-                <div class="competency-tag">Environmental compliance[cite: 2]</div>
-                <div class="competency-tag">PPE & training[cite: 2]</div>
-                <div class="competency-tag">Quality control[cite: 2]</div>
-                <div class="competency-tag">Fire & safety. Hassantuk[cite: 2]</div>
-                <div class="competency-tag">Worker health monitoring[cite: 2]</div>
-                <div class="competency-tag">Labour camp & housekeeping[cite: 2]</div>
-                <div class="competency-tag">Pest control[cite: 2]</div>
-                <div class="competency-tag">Solvent recovery[cite: 2]</div>
-            </div>
-        </div>
-    </section>
+  <section class="row" id="education">
+    <div class="label"><em>04</em>Education</div>
+    <div class="body">
+      <div class="edu">
+        <div class="card"><h3>Bachelor’s Degree, Petrochemical Engineering</h3><p>JCT College of Engineering and Technology · CGPA 7.70</p><span class="yr">2017 – 2021</span></div>
+        <div class="card"><h3>NEBOSH International General Certificate</h3><p>M2Y Global Academy, Dubai (UAE)</p><span class="yr">2023</span></div>
+      </div>
+    </div>
+  </section>
 
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title"><span>03</span> Experience</h2>
-            <div class="timeline">
-                
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">14 JUN 2024 – PRESENT[cite: 2]</div>
-                    <div class="timeline-content">
-                        <h3>HSE Officer[cite: 2]</h3>
-                        <h4>Emirates Steel Wool Manufacturing LLC[cite: 2]</h4>
-                        <ul>
-                            <li>Lowered workplace risk levels through structured hazard identification and control[cite: 2].</li>
-                            <li>Runs regular department-specific safety training[cite: 2].</li>
-                            <li>Maintains health monitoring for chemical-section workers[cite: 2].</li>
-                            <li>Leads quarterly audits of documents, machinery, and vehicles[cite: 2].</li>
-                            <li>Keeps records of incidents, equipment-handling safety, PPE, and vehicle maintenance checklists[cite: 2, 3].</li>
-                            <li>Labour camp and housekeeping inspections; Hassantuk, fire and safety, environment control, and pest control[cite: 3].</li>
-                        </ul>
-                    </div>
-                </div>
+  <div class="contact">
+    <div>
+      <h2>Get in touch</h2>
+      <p>nalifsha@gmail.com · +971 56 568 4481</p>
+    </div>
+    <div class="acts">
+      <a class="btn pop" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=nalifsha%40gmail.com&amp;su=Job%20Opportunity%20%E2%80%93%20Nalif%20Ahamed%20H." target="_blank" rel="noopener">Email me</a>
+      <a class="btn" href="tel:+971565684481">Call</a>
+    </div>
+  </div>
 
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-date">04 SEP 2021 – 28 JUN 2023[cite: 3]</div>
-                    <div class="timeline-content">
-                        <h3>Junior Executive - Production In-charge[cite: 3]</h3>
-                        <h4>Tagros Chemicals India Pvt Ltd[cite: 3]</h4>
-                        <ul>
-                            <li>Supervised deltamethrin production: bromination, chlorination, epimerisation, distillation, and crystallization[cite: 3].</li>
-                            <li>Consistently achieved output above target rate[cite: 3].</li>
-                            <li>Reduced waste by recovering process solvents and reusing them to purity specification[cite: 3].</li>
-                            <li>Managed rotational shifts of up to 40 personnel[cite: 3].</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title"><span>04</span> Education & Certifications</h2>
-            <div class="grid-education">
-                <div class="edu-card">
-                    <div class="edu-year">2017 - 2021[cite: 3]</div>
-                    <h3>Bachelor's Degree, Petrochemical Engineering[cite: 3]</h3>
-                    <p class="edu-inst">JCT College of Engineering and Technology</p>
-                    <p class="edu-grade">CGPA: 7.70[cite: 3]</p>
-                </div>
-                <div class="edu-card">
-                    <div class="edu-year">2023[cite: 3]</div>
-                    <h3>NEBOSH International General Certificate[cite: 3]</h3>
-                    <p class="edu-inst">M2Y Global Academy, Dubai (UAE)[cite: 3]</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
-        <div class="container text-center">
-            <h2 class="section-title">Get in Touch</h2>
-            <p class="contact-lead">Looking to collaborate or discuss HSE and engineering opportunities? Reach out directly.</p>
-            <div class="contact-info">
-                <a href="mailto:nalifsha@gmail.com"><i class="fa-solid fa-envelope"></i> nalifsha@gmail.com[cite: 1]</a>
-                <a href="tel:+971565684481"><i class="fa-solid fa-phone"></i> +971 56 568 4481[cite: 1]</a>
-                <span><i class="fa-solid fa-location-dot"></i> Abu Dhabi, UAE[cite: 1]</span>
-            </div>
-            <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
-                <a href="mailto:nalifsha@gmail.com" class="btn btn-primary">Email Me[cite: 1]</a>
-                <a href="tel:+971565684481" class="btn btn-outline">Call Now[cite: 1]</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Nalif Ahamed H. All Rights Reserved.</p>
-        </div>
-    </footer>
-
+  <footer>Nalif Ahamed H. · HSE Officer &amp; Petrochemical Engineer · Abu Dhabi, UAE</footer>
+</div>
 </body>
 </html>
