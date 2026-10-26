@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalif Ahamed H. - HSE Officer & Petrochemical Engineer</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Variables & Setup */
+        :root {
+            --primary: #0f172a;       /* Deep Slate / Industrial Dark */
+            --accent: #f97316;        /* Safety Orange Accent */
+            --accent-hover: #ea580c;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-main: #ffffff;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+            line-height: 1.6;
+        }
+
+        /* Containers & Utilities */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-title span {
+            color: var(--accent);
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--border-color);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+        }
+
+        /* Header & Navigation */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .btn-nav {
+            background-color: var(--primary);
+            color: #fff !important;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 7rem 0 5rem;
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: var(--accent);
+            color: #fff;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-desc {
+            font-size: 1.125rem;
+            color: var(--text-main);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: #fff;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-item h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .stat-item p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* About Section */
+        .about-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            font-size: 1.125rem;
+            line-height: 1.8;
+        }
+
+        .about-card p + p {
+            margin-top: 1.25rem;
+        }
+
+        /* Competencies Section */
+        .grid-competencies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .competency-tag {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.25rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--primary);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            transition: var(--transition);
+        }
+
+        .competency-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            border-left: 2px solid var(--border-color);
+            margin-left: 1rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.57rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+
+        .timeline-date {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .timeline-content h4 {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content ul {
+            list-style-type: disc;
+            padding-left: 1.25rem;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            color: var(--text-main);
+        }
+
+        /* Education Section */
+        .grid-education {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .edu-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .edu-year {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-card h3 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.25rem;
+        }
+
+        .edu-inst {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .edu-grade {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--primary);
+            color: #fff;
+        }
+
+        .contact-section .section-title {
+            color: #fff;
+            justify-content: center;
+        }
+
+        .contact-lead {
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-info a, .contact-info span {
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .contact-info a:hover {
+            color: var(--accent);
+        }
+
+        /* Footer */
+        .footer {
+            background: #090d16;
+            color: #64748b;
+            padding: 1.5rem 0;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Nalif Ahamed H.</a>
+            <nav class="nav-links">
+                <a href="#about">About</a>
+                <a href="#competencies">Competencies</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#contact" class="btn-nav">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <span class="badge">Portfolio 2026</span>
+            <h1>Nalif Ahamed H.</h1>
+            <p class="hero-subtitle">HSE Officer & Petrochemical Engineer</p>
+            <p class="hero-desc">Safety and compliance in chemical and steel manufacturing. Based in Abu Dhabi, UAE[cite: 1].</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>4+</h3>
+                    <p>Years in Production & HSE[cite: 1]</p>
+                </div>
+                <div class="stat-item">
+                    <h3>NEBOSH</h3>
+                    <p>International General Certificate[cite: 1]</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40 / 2</h3>
+                    <p>Personnel per shift & Sectors (Chemical & Steel)[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="mailto:nalifsha@gmail.com" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Email Me[cite: 1]</a>
+                <a href="tel:+971565684481" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call (+971 56 568 4481)[cite: 1]</a>
+                <a href="https://linkedin.com" target="_blank" class="btn btn-outline"><i class="fa-brands fa-linkedin"></i> LinkedIn[cite: 1]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title"><span>01</span> About Me</h2>
+            <div class="about-card">
+                <p>Petrochemical engineering graduate and NEBOSH IGC-certified HSE professional with combined production and safety experience across chemical and steel manufacturing operations in India and the UAE[cite: 1].</p>
+                <p>Began as Junior Executive Production In-charge at Tagros Chemicals, supervising deltamethrin production and exceeding targets while cutting waste through solvent recovery and reuse[cite: 1]. Since June 2024, serves as HSE Officer at Emirates Steel Wool Manufacturing LLC, lowering workplace risk, running training, and leading quarterly audits[cite: 1].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Competencies Section -->
+    <section id="competencies" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title"><span>02</span> Core Competencies</h2>
+            <div class="grid-competencies">
+                <div class="competency-tag">Permit to Work[cite: 2]</div>
+                <div class="competency-tag">LOTO & safe work[cite: 2]</div>
+                <div class="competency-tag">Incident investigation[cite: 2]</div>
+                <div class="competency-tag">HSE management systems[cite: 2]</div>
+                <div class="competency-tag">Risk assessment[cite: 2]</div>
+                <div class="competency-tag">HIRA / JSA[cite: 2]</div>
+                <div class="competency-tag">Emergency preparedness[cite: 2]</div>
+                <div class="competency-tag">Inspections & auditing[cite: 2]</div>
+                <div class="competency-tag">CAPA[cite: 2]</div>
+                <div class="competency-tag">Chemical safety[cite: 2]</div>
+                <div class="competency-tag">Process safety[cite: 2]</div>
+                <div class="competency-tag">Environmental compliance[cite: 2]</div>
+                <div class="competency-tag">PPE & training[cite: 2]</div>
+                <div class="competency-tag">Quality control[cite: 2]</div>
+                <div class="competency-tag">Fire & safety. Hassantuk[cite: 2]</div>
+                <div class="competency-tag">Worker health monitoring[cite: 2]</div>
+                <div class="competency-tag">Labour camp & housekeeping[cite: 2]</div>
+                <div class="competency-tag">Pest control[cite: 2]</div>
+                <div class="competency-tag">Solvent recovery[cite: 2]</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2 class="section-title"><span>03</span> Experience</h2>
+            <div class="timeline">
+                
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">14 JUN 2024 – PRESENT[cite: 2]</div>
+                    <div class="timeline-content">
+                        <h3>HSE Officer[cite: 2]</h3>
+                        <h4>Emirates Steel Wool Manufacturing LLC[cite: 2]</h4>
+                        <ul>
+                            <li>Lowered workplace risk levels through structured hazard identification and control[cite: 2].</li>
+                            <li>Runs regular department-specific safety training[cite: 2].</li>
+                            <li>Maintains health monitoring for chemical-section workers[cite: 2].</li>
+                            <li>Leads quarterly audits of documents, machinery, and vehicles[cite: 2].</li>
+                            <li>Keeps records of incidents, equipment-handling safety, PPE, and vehicle maintenance checklists[cite: 2, 3].</li>
+                            <li>Labour camp and housekeeping inspections; Hassantuk, fire and safety, environment control, and pest control[cite: 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-date">04 SEP 2021 – 28 JUN 2023[cite: 3]</div>
+                    <div class="timeline-content">
+                        <h3>Junior Executive - Production In-charge[cite: 3]</h3>
+                        <h4>Tagros Chemicals India Pvt Ltd[cite: 3]</h4>
+                        <ul>
+                            <li>Supervised deltamethrin production: bromination, chlorination, epimerisation, distillation, and crystallization[cite: 3].</li>
+                            <li>Consistently achieved output above target rate[cite: 3].</li>
+                            <li>Reduced waste by recovering process solvents and reusing them to purity specification[cite: 3].</li>
+                            <li>Managed rotational shifts of up to 40 personnel[cite: 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title"><span>04</span> Education & Certifications</h2>
+            <div class="grid-education">
+                <div class="edu-card">
+                    <div class="edu-year">2017 - 2021[cite: 3]</div>
+                    <h3>Bachelor's Degree, Petrochemical Engineering[cite: 3]</h3>
+                    <p class="edu-inst">JCT College of Engineering and Technology</p>
+                    <p class="edu-grade">CGPA: 7.70[cite: 3]</p>
+                </div>
+                <div class="edu-card">
+                    <div class="edu-year">2023[cite: 3]</div>
+                    <h3>NEBOSH International General Certificate[cite: 3]</h3>
+                    <p class="edu-inst">M2Y Global Academy, Dubai (UAE)[cite: 3]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container text-center">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-lead">Looking to collaborate or discuss HSE and engineering opportunities? Reach out directly.</p>
+            <div class="contact-info">
+                <a href="mailto:nalifsha@gmail.com"><i class="fa-solid fa-envelope"></i> nalifsha@gmail.com[cite: 1]</a>
+                <a href="tel:+971565684481"><i class="fa-solid fa-phone"></i> +971 56 568 4481[cite: 1]</a>
+                <span><i class="fa-solid fa-location-dot"></i> Abu Dhabi, UAE[cite: 1]</span>
+            </div>
+            <div class="hero-buttons" style="justify-content: center; margin-top: 2rem;">
+                <a href="mailto:nalifsha@gmail.com" class="btn btn-primary">Email Me[cite: 1]</a>
+                <a href="tel:+971565684481" class="btn btn-outline">Call Now[cite: 1]</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Nalif Ahamed H. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
